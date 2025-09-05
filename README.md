@@ -1,4 +1,5 @@
 # 🔮 MyPalantir - A Gemini-Inspired AI Knowledge System
+![Static Badge](https://img.shields.io/badge/Google-Gemini-%238E75B2?logo=googlegemini)
 
 > **🚀 Quick Start:** This repository is a template for the MyPalantir system. Follow the steps below to create your own private, personalized version.
 
