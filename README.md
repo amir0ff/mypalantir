@@ -29,7 +29,7 @@ You're all set! To start a new chat, create a new file and use the prompt struct
 **Session Context:**
 *   **Persona:** `@gems/Writing editor/writing_editor.mdc`
 *   **Profile:** `@saved_info/user_profile.md`
-*   **Save Chat To:** `chats/writing_session_0.md`
+*   **Save Chat To:** `chats/writing_session_0/writing_session_0.md`
 
 ---
 
@@ -44,8 +44,12 @@ This structured prompt allows the AI to clearly understand its role, the knowled
 MyPalantir/
 ├── README.md                       # This file
 ├── chats/                          # Chat conversation history and context
-│   ├── example_chat_0.md           # Template for initial conversations
-│   └── example_chat_1.md           # Template for conversation continuations
+│   ├── example_chat_0/             # Each chat is in its own directory
+│   │   ├── example_chat_0.md       # The chat markdown file
+│   │   └── files/                    # Optional attached files for this chat
+│   │       └── example_attachment.txt
+│   └── example_chat_1/
+│       └── example_chat_1.md
 ├── gems/                           # Core knowledge modules and AI personas
 │   ├── Career guide/
 │   │   └── career_guide.mdc        # High-quality career coaching persona
@@ -62,11 +66,11 @@ MyPalantir/
 ## 🗺️ Directory Purposes
 
 ### 📁 `/chats`
-Contains detailed conversation history and context files. These markdown files preserve important discussions, strategic planning sessions, and mission tracking. Perfect for maintaining continuity across AI interactions.
+Contains detailed conversation history. Each chat is organized into its own directory, which holds the markdown conversation file and an optional `files/` subfolder for any relevant attachments like documents, images, or data files. This keeps each conversation and its related materials neatly bundled together.
 
 **Template Files:**
-- `example_chat_0.md` - Template for initial conversations and planning sessions.
-- `example_chat_1.md` - Template for conversation continuations.
+- `example_chat_0/` - A template directory for a new conversation, including an example `files/` folder.
+- `example_chat_1/` - A template directory for a continuing conversation.
 
 ### 📁 `/gems`
 Houses specialized AI personas (Gems). Each gem is contained within its own directory, which holds the `.mdc` persona file and an optional `knowledge/` subfolder for relevant reference materials.
