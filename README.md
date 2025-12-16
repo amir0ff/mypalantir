@@ -1,8 +1,8 @@
-# 🔮 MyPalantir - A Gemini-Inspired AI Knowledge System
+# 🔮 MyPalantir - A Gemini-Inspired AI Knowledge System (Cursor Edition)
 ![Static Badge](https://img.shields.io/badge/Google-Gemini-%238E75B2?logo=googlegemini)
 ![Static Badge](https://img.shields.io/badge/Cursor-IDE-black?logo=cursor&logoColor=white)
 
-> **🚀 Quick Start:** This repository is a template for the MyPalantir system. Follow the steps below to create your own private, personalized version.
+> **🛸 Antigravity User?** Check out the **[Antigravity Edition](https://github.com/amir0ff/mypalantir/tree/antigravity)** for a free, workflow-based alternative.
 
 ## 🏛️ Overview
 
