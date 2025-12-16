@@ -1,11 +1,10 @@
-# 🔮 MyPalantir - A Gemini-Inspired AI Knowledge System
+# 🔮 MyPalantir - A Gemini-Inspired AI Knowledge System (Antigravity Edition)
 ![Static Badge](https://img.shields.io/badge/Google-Gemini-%238E75B2?logo=googlegemini)
-
-> **🚀 Quick Start:** This repository is a template for the MyPalantir system. Follow the steps below to create your own private, personalized version.
+![Static Badge](https://img.shields.io/badge/Antigravity-IDE-%232377d5?logo=google)
 
 ## 🏛️ Overview
 
-MyPalantir replicates the organizational framework of Google's Gemini project, providing a structured approach for managing AI-generated content, conversation history, and custom AI personas (Gems).
+MyPalantir replicates the organizational framework of Google's Gemini project, providing a structured approach for managing AI-generated content, conversation history, and custom AI personas (Gems). 
 
 ## 🚀 Getting Started
 
@@ -14,37 +13,40 @@ Click the **"Use this template"** button at the top of this repository's page an
 
 On the creation page, give your new repository a name (e.g., `MyPalantir-Personal`) and, most importantly, set its visibility to **Private**. This will create a brand new, private copy of the system in your own account with a clean history, ready for your personal use.
 
+**Then, open this new repository in Antigravity.**
+
 ### Step 2️⃣: Personalize Your System
-Now that you have your own private copy, customize the template with your information:
+1.  **Create Your Profile:** Edit `saved_info/user_profile.md` with your details.
+2.  **Customize Your Gems:** Explore the pre-built `gems/` folder. Add any reference materials to the `knowledge/` subfolder within each gem.
 
-1.  **Create Your Profile:** Rename `saved_info/example_user_profile.md` to `user_profile.md` and fill it out.
-2.  **Customize Your Gems:** Explore the pre-built `gems/Career guide/`, `gems/Learning coach/`, and `gems/Writing editor/`. Add any reference materials to the `knowledge/` subfolder within each gem.
-3.  **Clean Up:** Delete the example chat files in the `chats/` directory.
+### Step 3️⃣: Run the Context Workflow
+To act as a persistent AI assistant, simply run the workflow:
 
-### Step 3️⃣: Start Your First Conversation
-You're all set! To start a new chat, create a new file and use the prompt structure below. It tells the AI which persona, knowledge base, and user profile to load for the session.
+> **"Run the load gem workflow"**
 
-**Example Starting Prompt:**
+I will then:
+1.  List your available Gems (e.g., "Career guide", "Writing editor").
+2.  Ask you to choose one.
+3.  **Automatically load** that persona and your user profile into the chat.
 
-```yaml
-# Session Context: Define the AI's environment, resources, and save location.
-gem:
-  persona: "@gems/Writing editor/writing_editor.mdc"
-  knowledge: "@gems/Writing editor/knowledge/"
-chat:
-  save_to: "chats/writing_session_0/writing_session_0.md"
-  attached_files: "@chats/writing_session_0/files/"
-profile: "@saved_info/user_profile.md"
+### Step 4️⃣: Start a New Chat
+If you want to organize your conversation (just like the original MyPalantir), simply ask me to set it up:
 
-prompt: "Okay, I'm ready to start. I need to write a professional email to a potential client. Can you help me draft it? I want it to be clear, concise, and persuasive."
-```
+> **"Start a new chat session for [Topic Name]"**
 
-This structured prompt allows the AI to clearly understand its role, the knowledge it should use, your personal context, and the specific goals of the conversation before you even ask your first question.
+I will automatically:
+1.  Create `chats/[Topic Name]/`
+2.  Create the markdown file `chats/[Topic Name]/[Topic Name].md`
+3.  Set the context so we can save our progress there.
+
+*No complex YAML prompts required—just ask!*
 
 ## 📂 Project Structure
 
 ```
 MyPalantir/
+├── .agent/workflows/               # ⚡ AUTOMATION WORKFLOWS (Antigravity Exclusive)
+│   └── load_gem.md                 # The script that makes context loading free
 ├── README.md                       # This file
 ├── chats/                          # Chat conversation history and context
 │   ├── example_chat_0/             # Each chat is in its own directory
@@ -98,4 +100,4 @@ Stores persistent user information, preferences, and background context. This en
 
 ---
 
-*MyPalantir - Your personal AI knowledge management system*
+*MyPalantir - Your personal, free AI knowledge management system*
