@@ -2,9 +2,13 @@
 ![Static Badge](https://img.shields.io/badge/Google-Gemini-%238E75B2?logo=googlegemini)
 ![Static Badge](https://img.shields.io/badge/Antigravity-IDE-%232377d5?logo=google)
 
+> **🛸 Not using Antigravity?** Check out the **[Cursor Edition](https://github.com/amir0ff/mypalantir)** for the standard implementation.
+
 ## 🏛️ Overview
 
 MyPalantir replicates the organizational framework of Google's Gemini project, providing a structured approach for managing AI-generated content, conversation history, and custom AI personas (Gems). 
+
+**Version 3.0** is optimized for Gemini 3.0 models, featuring **Agentic Reasoning**, built-in psychological and pedagogical frameworks (**ACT, CBT, Socratic Method**), and **Automatic Context Ingestion**.
 
 ## 🚀 Getting Started
 
@@ -17,7 +21,7 @@ On the creation page, give your new repository a name (e.g., `MyPalantir-Persona
 
 ### Step 2️⃣: Personalize Your System
 1.  **Create Your Profile:** Edit `saved_info/user_profile.md` with your details.
-2.  **Customize Your Gems:** Explore the pre-built `gems/` folder. Add any reference materials to the `knowledge/` subfolder within each gem.
+2.  **Customize Your Gems:** Explore the pre-built `gems/Career guide/`, `gems/Learning coach/`, and `gems/Writing editor/`. Add any reference materials to the `knowledge/` subfolder within each gem.
 
 ### Step 3️⃣: Run the Context Workflow
 To act as a persistent AI assistant, simply run the workflow:
@@ -47,6 +51,8 @@ I will automatically:
 MyPalantir/
 ├── .agent/workflows/               # ⚡ AUTOMATION WORKFLOWS (Antigravity Exclusive)
 │   └── load_gem.md                 # The script that makes context loading free
+├── .cursor/rules/
+│   └── global_context.mdc          # Global rule for automatic identity loading (for Cursor users)
 ├── README.md                       # This file
 ├── chats/                          # Chat conversation history and context
 │   ├── example_chat_0/             # Each chat is in its own directory
@@ -57,39 +63,39 @@ MyPalantir/
 │       └── example_chat_1.md
 ├── gems/                           # Core knowledge modules and AI personas
 │   ├── Career guide/
-│   │   └── career_guide.mdc        # High-quality career coaching persona
+│   │   └── career_guide.mdc        # Strategic career coach (v3.0)
 │   ├── Learning coach/
-│   │   └── learning_coach.mdc      # Persona to help learn new topics
+│   │   └── learning_coach.mdc      # Socratic teaching persona (v3.0)
 │   └── Writing editor/
-│       ├── writing_editor.mdc      # Persona to help you improve your writing
+│       ├── writing_editor.mdc      # Style-conscious senior editor (v3.0)
 │       └── knowledge/              # Optional knowledge for this gem
 │           └── Book.txt            # Example knowledge file
 └── saved_info/                     # User account and profile information
-    └── example_user_profile.md     # Template user profile
+    └── user_profile.md             # Your personalized profile
 ```
 
 ## 🗺️ Directory Purposes
 
 ### 📁 `/chats`
-Contains detailed conversation history. Each chat is organized into its own directory, which holds the markdown conversation file and an optional `files/` subfolder for any relevant attachments like documents, images, or data files. This keeps each conversation and its related materials neatly bundled together.
+Contains detailed conversation history. In Version 3.0, any chat in this directory **automatically reads your identity** from `user_profile.md` via the global system rules (if using Cursor) or the workflow (if using Antigravity).
 
 **Template Files:**
 - `example_chat_0/` - A template directory for a new conversation, including an example `files/` folder.
 - `example_chat_1/` - A template directory for a continuing conversation.
 
 ### 📁 `/gems`
-Houses specialized AI personas (Gems). Each gem is contained within its own directory, which holds the `.mdc` persona file and an optional `knowledge/` subfolder for relevant reference materials.
+Houses specialized AI personas (Gems). Version 3.0 Gems are powered by **Agentic Reasoning** and **Automatic Expertise Ingestion**. Each gem is a generic template that remains private until "plugged in" to your data.
 
 **Template Gems:**
--   💼 **Career guide** - Unlock your career potential. Get a detailed plan to refine your skills and achieve your career goals.
--   📖 **Learning coach** - Here to help you learn and practice new concepts. Tell me what you'd like to learn, and I'll help you get started.
--   📝 **Writing editor** - Elevate your writing. Get clear, constructive feedback, from grammar to structure.
+-   💼 **Career guide** - Strategic coach for planning, CV reviews, and interview prep.
+-   📖 **Learning coach** - Socratic tutor that facilitates understanding through "Productive Struggle."
+-   📝 **Writing editor** - Style-conscious senior editor.
 
 ### 📁 `/saved_info`
 Stores persistent user information, preferences, and background context. This ensures AI interactions remain personalized and contextually aware.
 
 **Template Files:**
-- `example_user_profile.md` - Template for creating your personal user profile.
+- `user_profile.md` - Your personal user profile.
 
 ## 🗃️ File Format Guidelines
 
@@ -100,4 +106,4 @@ Stores persistent user information, preferences, and background context. This en
 
 ---
 
-*MyPalantir - Your personal, free AI knowledge management system*
+*MyPalantir - Your personal AI knowledge management system*

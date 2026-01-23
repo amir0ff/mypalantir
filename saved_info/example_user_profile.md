@@ -1,56 +1,66 @@
-# User Profile Template
-*Replace this template with your personal information*
+# User Profile & Saved Information (Template)
 
-## Personal Background
+*Replace this template with your personal information. This profile is automatically loaded into every chat session in the `chats/` directory via the system rules.*
 
-### Basic Information
-- **Name**: [Your name or preferred identifier]
-- **Location**: [Your current location]
-- **Citizenship**: [Your citizenship status]
-- **Languages**: [Languages you speak]
+## 👤 Personal Background
+
+### Identity & Location
+- **Name/Identifier:** [Your name or preferred identifier]
+- **Citizenship/Identity:** [Enter Citizenship status, e.g., "Citizen of X"]
+- **Current Location:** [Enter location context, e.g., "Living in Y, moving to Z"]
+- **Languages:** [Languages you speak and your proficiency level]
 
 ### Current Situation
-- **Status**: [Current life/career situation]
-- **Goals**: [What you're trying to achieve]
-- **Challenges**: [Current obstacles or difficulties]
-
-## Professional Information
-
-### Career & Skills
-- **Profession**: [Your job title or field]
-- **Experience**: [Years of experience and key skills]
-- **Specializations**: [Areas of expertise]
-- **Current Role**: [What you do now]
-
-### Career Goals
-- **Short-term**: [Immediate career objectives]
-- **Long-term**: [Long-term career aspirations]
-- **Skills to Develop**: [Areas for improvement]
-
-## Personal Preferences
-
-### Communication Style
-- **Language Preference**: [Preferred communication style]
-- **Detail Level**: [How much detail you prefer]
-- **Examples**: [Whether you like examples and analogies]
-
-### Decision-Making
-- **Style**: [How you prefer to make decisions]
-- **Support Needed**: [What kind of help you want]
-- **Timeline**: [Your typical decision-making pace]
-
-## Context & History
-
-### Relevant Background
-- **Recent Changes**: [Major life changes]
-- **Past Experiences**: [Relevant previous experiences]
-- **Lessons Learned**: [Key insights from past]
-
-### Current Priorities
-1. [Top priority]
-2. [Second priority]
-3. [Third priority]
+- **Current Status:** [Describe your current situation, career stage, or life phase]
+- **Mental State:** [Describe your typical or current mental state, e.g., "Highly motivated" or "Stressed"]
+- **Historical Context:** [Brief overview of previous significant moves or life changes]
 
 ---
 
-*Replace all bracketed placeholders with your actual information. This template helps AI assistants understand your background and preferences.*
+## 💼 Professional Information
+
+### Role & Expertise
+- **Profession/Role:** [e.g., Senior Software Engineer]
+- **Core Skills:** [e.g., React, TypeScript, Python, etc.]
+- **Experience:** [Years of experience and key focus areas]
+- **Specializations:** [Areas of expertise]
+
+### Career Context
+- **Current Employment:** [Company name or status]
+- **Previous Roles:**
+    - [Role at Company A]
+    - [Role at Company B]
+
+---
+
+## 🎯 Goals & Challenges
+
+### Current Priorities
+1. [Goal 1, e.g., "Find a new job by April"]
+2. [Goal 2, e.g., "Save €2,000"]
+3. [Goal 3, e.g., "Master a new skill"]
+
+### Challenges & Obstacles
+- [Challenge 1, e.g., "Language barrier in current location"]
+- [Challenge 2, e.g., "Difficulty with work-life balance"]
+
+### Core Values
+- [Value 1, e.g., Independence]
+- [Value 2, e.g., Growth]
+
+---
+
+## 🗣️ Communication Preferences
+
+### Style & Approach
+- **Tone Preference:** [e.g., "Direct, professional, and slightly informal"]
+- **Detail Level:** [e.g., "High detail for technical topics, low for administrative"]
+- **Emotional Support:** [e.g., "Be firm and rational when I'm being emotional" or "Be empathetic and supportive"]
+- **Reasoning style:** [e.g., "Always use first principles reasoning"]
+
+### Cognitive Distortions to Watch For
+- [List any patterns you want the AI to catch, e.g., "Catastrophizing," "All-or-nothing thinking"]
+
+---
+
+*Template for MyPalantir 3.0 - Fill this out to personalize your system. Save as `user_profile.md` in this directory to activate.*

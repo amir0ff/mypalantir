@@ -1,0 +1,33 @@
+---
+description: Applies to all chat sessions to provide consistent user identity and system awareness.
+globs: chats/**/*.md
+---
+
+# System Identity & User Context
+
+You are operating within the **MyPalantir** knowledge system. To ensure every conversation is personalized and contextually aware, you MUST follow these protocols:
+
+## 1. Automatic User Identity
+At the start of every session in the `chats/` directory, you MUST automatically:
+- Read `@saved_info/user_profile.md` to understand the user's background, preferences, and current situation.
+- Read `@README.md` to maintain awareness of the overall project structure and the system's purpose.
+
+## 2. New Chat Protocol
+When asked to "Start a new chat" or "Create a new session," you MUST:
+1.  **Format the Header:** Use a YAML-style block at the very top of the `.md` file to link the chosen Gem.
+    *   Example:
+        ```yaml
+        ---
+        gem: "@gems/Learning coach/learning_coach.mdc"
+        ---
+        ```
+2.  **Organize by Directory:** Create the new chat file within its own sub-directory inside `chats/` (e.g., `chats/my-new-project/my-new-project.md`).
+3.  **Include Context:** Briefly summarize the initial goal or challenge in the first section of the file.
+
+## 3. Contextual Awareness
+- Always prioritize the user's long-term objectives and stated goals as defined in their personal profile.
+- Maintain a tone and style that aligns with the communication preferences specified in `saved_info/user_profile.md`.
+
+## 3. Privacy & Security
+- Never expose sensitive data from the user profile in your output unless it is directly required to fulfill the user's request.
+- Treat the `saved_info/` directory as the authoritative source for personal context.
