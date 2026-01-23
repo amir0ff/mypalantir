@@ -20,7 +20,7 @@ On the creation page, give your new repository a name (e.g., `MyPalantir-Persona
 **Then, open this new repository in Antigravity.**
 
 ### Step 2️⃣: Personalize Your System
-1.  **Create Your Profile:** Edit `saved_info/user_profile.md` with your details.
+1.  **Create Your Profile:** Rename `saved_info/example_user_profile.md` to `user_profile.md` and fill it out.
 2.  **Customize Your Gems:** Explore the pre-built `gems/Career guide/`, `gems/Learning coach/`, and `gems/Writing editor/`. Add any reference materials to the `knowledge/` subfolder within each gem.
 
 ### Step 3️⃣: Run the Context Workflow
