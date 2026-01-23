@@ -1,3 +1,7 @@
+---
+gem: "@gems/Learning coach/learning_coach.mdc"
+---
+
 # Example Chat: Progress Update & Continuation
 *Template for conversation continuation after context window limit*
 

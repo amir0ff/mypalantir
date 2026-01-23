@@ -6,7 +6,9 @@
 
 ## 🏛️ Overview
 
-MyPalantir replicates the organizational framework of Google's Gemini project, providing a structured approach for managing AI-generated content, conversation history, and custom AI personas (Gems).
+MyPalantir replicates the organizational framework of Google's Gemini project, providing a structured approach for managing AI-generated content, conversation history, and custom AI personas (Gems). 
+
+**Version 3.0** is optimized for Gemini 3.0 models, featuring **Agentic Reasoning**, built-in psychological and pedagogical frameworks (**ACT, CBT, Socratic Method**), and **Automatic Context Ingestion**.
 
 ## 🚀 Getting Started
 
@@ -22,30 +24,35 @@ Now that you have your own private copy, customize the template with your inform
 2.  **Customize Your Gems:** Explore the pre-built `gems/Career guide/`, `gems/Learning coach/`, and `gems/Writing editor/`. Add any reference materials to the `knowledge/` subfolder within each gem.
 3.  **Clean Up:** Delete the example chat files in the `chats/` directory.
 
-### Step 3️⃣: Start Your First Conversation
-You're all set! To start a new chat, create a new file and use the prompt structure below. It tells the AI which persona, knowledge base, and user profile to load for the session.
+### Step 3️⃣: Start or Resume a Conversation
+You're all set! To start a new chat, you can either create a markdown file yourself or simply ask the AI: **"Start a new chat session for [Topic] using the [Gem Name] persona."**
 
-**Example Starting Prompt:**
+**The AI will automatically:**
+1. Create a new directory and file in the `chats/` folder.
+2. Insert the **Persona Anchor** header.
+3. Load your identity and the Gem's expertise.
+
+**Manual Setup Example:**
+If you prefer to create the file yourself, use this structure at the top of your `.md` file:
 
 ```yaml
-# Session Context: Define the AI's environment, resources, and save location.
-gem:
-  persona: "@gems/Writing editor/writing_editor.mdc"
-  knowledge: "@gems/Writing editor/knowledge/"
-chat:
-  save_to: "chats/writing_session_0/writing_session_0.md"
-  attached_files: "@chats/writing_session_0/files/"
-profile: "@saved_info/user_profile.md"
+---
+gem: "@gems/Writing editor/writing_editor.mdc"
+---
 
-prompt: "Okay, I'm ready to start. I need to write a professional email to a potential client. Can you help me draft it? I want it to be clear, concise, and persuasive."
+# [Session Title]
+prompt: "Okay, I'm ready to start. Can you help me analyze this decision?"
 ```
 
-This structured prompt allows the AI to clearly understand its role, the knowledge it should use, your personal context, and the specific goals of the conversation before you even ask your first question.
+**Resuming a Session:**
+Simply open any existing chat file and use the **Cursor Chat (Ctrl+L)**. Because the YAML anchor is at the top of the file, the AI will automatically resume with the correct persona and your personal context.
 
 ## 📂 Project Structure
 
 ```
 MyPalantir/
+├── .cursor/rules/
+│   └── global_context.mdc          # Global rule for automatic identity loading
 ├── README.md                       # This file
 ├── chats/                          # Chat conversation history and context
 │   ├── example_chat_0/             # Each chat is in its own directory
@@ -56,11 +63,11 @@ MyPalantir/
 │       └── example_chat_1.md
 ├── gems/                           # Core knowledge modules and AI personas
 │   ├── Career guide/
-│   │   └── career_guide.mdc        # High-quality career coaching persona
+│   │   └── career_guide.mdc        # Strategic career coach
 │   ├── Learning coach/
-│   │   └── learning_coach.mdc      # Persona to help learn new topics
+│   │   └── learning_coach.mdc      # Socratic teaching persona
 │   └── Writing editor/
-│       ├── writing_editor.mdc      # Persona to help you improve your writing
+│       ├── writing_editor.mdc      # Style-conscious senior editor
 │       └── knowledge/              # Optional knowledge for this gem
 │           └── Book.txt            # Example knowledge file
 └── saved_info/                     # User account and profile information
@@ -70,19 +77,19 @@ MyPalantir/
 ## 🗺️ Directory Purposes
 
 ### 📁 `/chats`
-Contains detailed conversation history. Each chat is organized into its own directory, which holds the markdown conversation file and an optional `files/` subfolder for any relevant attachments like documents, images, or data files. This keeps each conversation and its related materials neatly bundled together.
+Contains detailed conversation history. In Version 3.0, any chat in this directory **automatically reads your identity** from `user_profile.md` via the global system rules. Each chat remains organized into its own directory for bundling related materials neatly.
 
 **Template Files:**
 - `example_chat_0/` - A template directory for a new conversation, including an example `files/` folder.
 - `example_chat_1/` - A template directory for a continuing conversation.
 
 ### 📁 `/gems`
-Houses specialized AI personas (Gems). Each gem is contained within its own directory, which holds the `.mdc` persona file and an optional `knowledge/` subfolder for relevant reference materials.
+Houses specialized AI personas (Gems). Version 3.0 Gems are powered by **Agentic Reasoning** and **Automatic Expertise Ingestion** (they automatically read their own `knowledge/` subfolders). Each gem is a generic template that remains private until "plugged in" to your data.
 
 **Template Gems:**
--   💼 **Career guide** - Unlock your career potential. Get a detailed plan to refine your skills and achieve your career goals.
--   📖 **Learning coach** - Here to help you learn and practice new concepts. Tell me what you'd like to learn, and I'll help you get started.
--   📝 **Writing editor** - Elevate your writing. Get clear, constructive feedback, from grammar to structure.
+-   💼 **Career guide** - Strategic coach for planning, CV reviews, and interview prep.
+-   📖 **Learning coach** - Socratic tutor that facilitates understanding through "Productive Struggle."
+-   📝 **Writing editor** - Style-conscious editor with voice mapping and cross-cultural nuance analysis.
 
 ### 📁 `/saved_info`
 Stores persistent user information, preferences, and background context. This ensures AI interactions remain personalized and contextually aware.

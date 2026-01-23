@@ -1,3 +1,7 @@
+---
+gem: "@gems/Career guide/career_guide.mdc"
+---
+
 # Example Chat: Project Planning Session
 *Template for initial conversation and planning*
 
